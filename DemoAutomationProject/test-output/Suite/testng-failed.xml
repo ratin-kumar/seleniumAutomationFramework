@@ -4,9 +4,54 @@
   <listeners>
     <listener class-name="com.mystore.utility.ListenerClass"/>
   </listeners>
-  <test thread-count="5" name="IndexPage(failed)">
+  <test thread-count="5" name="Test_all(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
+      <class name="com.mystore.testscripts.EndToEndTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="loadConfig"/>
+          <include name="endToEndTest"/>
+          <include name="afterSuite"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.mystore.testscripts.EndToEndTest -->
+      <class name="com.mystore.testscripts.AccountCreationTest">
+        <methods>
+          <include name="createAccountPageTest"/>
+          <include name="loadConfig"/>
+          <include name="afterSuite"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.mystore.testscripts.AccountCreationTest -->
+      <class name="com.mystore.testscripts.HomePageTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="afterSuite"/>
+          <include name="orderHistoryandDetailsTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.mystore.testscripts.HomePageTest -->
+      <class name="com.mystore.testscripts.SearchResultPageTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="afterSuite"/>
+          <include name="productAvailablityTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.mystore.testscripts.SearchResultPageTest -->
+      <class name="com.mystore.testscripts.OrderPageTest">
+        <methods>
+          <include name="totalPriceTest"/>
+          <include name="loadConfig"/>
+          <include name="afterSuite"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.mystore.testscripts.OrderPageTest -->
       <class name="com.mystore.testscripts.IndexPageTest">
         <methods>
           <include name="tearDown"/>
@@ -17,5 +62,5 @@
         </methods>
       </class> <!-- com.mystore.testscripts.IndexPageTest -->
     </classes>
-  </test> <!-- IndexPage(failed) -->
+  </test> <!-- Test_all(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -23,7 +23,7 @@ public class BaseClass {
 	public static Properties prop;
 
 	@BeforeSuite(groups = { "smoke", "sanity", "regression" })
-	// Method to initialize log4j.xml file.
+	// Method to initialize log4j.xml file and set extents for extent report
 	public void loadConfig() throws Throwable {
 		ExtentManager.setExtent();
 		DOMConfigurator.configure("log4j.xml");
